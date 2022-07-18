@@ -1,7 +1,7 @@
 import random
 import os
 
-from pyrogram import Client, filters
+from pyrogram import Client, filters, enums
 from PIL import Image
 
 
@@ -24,7 +24,7 @@ You can Download Source Code on  Github.com/localhoct 🥰
 ''' #this is the message after client send /start to the bot
 CAPTION = 'Coverted by @stickerConv_Bot 😬\n[Downlaod Source Code](https://Github.com/localhoct) 😈' # caption of the files
 
-bot.set_parse_mode('md')
+bot.set_parse_mode(enums.ParseMode.DEFAULT)
 @bot.on_message(filters.command("start",'/'))
 def start_messgae(c, m):
     m.reply_text(START_MESSAGE)
