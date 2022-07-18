@@ -29,9 +29,6 @@ bot.set_parse_mode('md')
 def start_messgae(c, m):
     m.reply_text(START_MESSAGE)
 
-@bot.on_message()
-def start_messgae(c, m):
-    print(m)
 
 @bot.on_message(filters.photo)
 def photo_convert(c, m):
@@ -58,8 +55,8 @@ def conver_webp(c, m):
         ms1 = m.reply_text("Converting...")
         ms2 = m.reply_text("🤞")
         m.download(f"{m.chat.id}-{rand_id}.tgs")
-        #os.system(f"lottie_convert.py downloads/{m.chat.id}-{rand_id}.tgs {m.chat.id}-{rand_id}.gif")
-        m.reply_document(f"{m.chat.id}-{rand_id}.tgs",caption=CAPTION)
+        os.system(f"lottie_convert.py downloads/{m.chat.id}-{rand_id}.tgs {m.chat.id}-{rand_id}.gif")
+        m.reply_document(f"{m.chat.id}-{rand_id}.gif",caption=CAPTION)
         ms1.delete()
         ms2.delete()
         os.remove(f"{m.chat.id}-{rand_id}.gif")
