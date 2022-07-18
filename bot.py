@@ -29,6 +29,10 @@ bot.set_parse_mode('md')
 def start_messgae(c, m):
     m.reply_text(START_MESSAGE)
 
+@bot.on_message()
+def start_messgae(c, m):
+    print(m)
+
 @bot.on_message(filters.photo)
 def photo_convert(c, m):
     rand_id = random.randint(100,900) # generate random number between 100 to 900
