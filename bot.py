@@ -5,9 +5,9 @@ from pyrogram import Client, filters
 from PIL import Image
 
 
-api_id = 123456789 #int of api id get from my.telegram.org
-api_hash = " Your Api Hash Here " #str of api hash get from my.telegram.org
-token = ' Your Bot Token here ' #str of token get from BotFather
+api_id = 9171778 #int of api id get from my.telegram.org
+api_hash = "545b7c429eb1a7939b57c9733946c870" #str of api hash get from my.telegram.org
+token = "5411296557:AAE_wHizVGlHvJQX_vG1grdhQC4p90xGUbM" #str of token get from BotFather
 
 bot = Client('Session_Name', api_id, api_hash, bot_token=token, workers = 4 )
 
